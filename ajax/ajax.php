@@ -1,6 +1,6 @@
 <?php
 include("../include/db.php");
-include("../include/db1.php");
+// include("../include/db1.php");
 include("../include/functions.php");
 
 //id //
@@ -386,7 +386,7 @@ if ($action=="login") {
 	$query = "SELECT * FROM user";
 	$query .= " WHERE id='$user' AND is_deleted=0 AND userroles!=0";
 
-	// echo $query;
+	echo $query;
 	$query = mysql_query($query)or die('query failed');
 	$x = mysql_num_rows($query);
 	if ($x==0) {
